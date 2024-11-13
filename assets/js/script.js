@@ -15,7 +15,6 @@ const slideData = [
 let currentSlide = 0;
 let autoScrollInterval;
 
-// Обновление слайдера
 function updateSlider() {
   slides.forEach((slide, index) => {
     slide.style.display = index === currentSlide ? 'block' : 'none';
@@ -31,7 +30,6 @@ function updateSlider() {
   });
 }
 
-// Автоматическая прокрутка
 function startAutoScroll() {
   autoScrollInterval = setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
@@ -39,7 +37,6 @@ function startAutoScroll() {
   }, 3000);
 }
 
-// Управление прокруткой
 document.querySelector('.next').addEventListener('click', () => {
   clearInterval(autoScrollInterval);
   currentSlide = (currentSlide + 1) % slides.length;
@@ -54,21 +51,31 @@ document.querySelector('.prev').addEventListener('click', () => {
   startAutoScroll();
 });
 
-// Поддержка жестов прокрутки
 let startX = 0;
+let isTouchMove = false;
 
 document.querySelector('.slider-img').addEventListener('touchstart', (e) => {
   startX = e.touches[0].clientX;
+  isTouchMove = true;
 });
 
-document.querySelector('.slider-img').addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX > endX + 50) {
-    currentSlide = (currentSlide + 1) % slides.length;
-  } else if (startX < endX - 50) {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+document.querySelector('.slider-img').addEventListener('touchmove', (e) => {
+  if (isTouchMove) {
+    const endX = e.touches[0].clientX;
+    if (startX > endX + 50) {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlider();
+      isTouchMove = false;
+    } else if (startX < endX - 50) {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlider();
+      isTouchMove = false;
+    }
   }
-  updateSlider();
+});
+
+document.querySelector('.slider-img').addEventListener('touchend', () => {
+  isTouchMove = false;
 });
 
 updateSlider();

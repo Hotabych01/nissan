@@ -511,6 +511,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   max-width: 1000px;
   margin: auto;
+  margin-bottom: 80px;
+
 }
 .slider-section .slider-wrap {
   display: flex;
