@@ -74,6 +74,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+.model-more-btn .more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  width: 100%;
+  background: none;
+  border-radius: 40px;
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  transition-duration: 0.3s;
+}
+.model-more-btn .more-btn span svg {
+  width: 100%;
+  height: 100%;
+}
+.model-more-btn .more-btn span svg path {
+  transition-duration: 0.3s;
+}
+
+.model-more-btn:hover .more-btn {
+  border: 1px solid #666666;
+  color: #666666;
+  transition-duration: 0.3s;
+}
+.model-more-btn:hover .more-btn span svg {
+  width: 100%;
+  height: 100%;
+}
+.model-more-btn:hover .more-btn span svg path::before {
+  transition-duration: 0.3s;
+  color: "#666666";
+}
+
+.model-more-btn-price .more-btn {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  background: #000;
+  border-radius: 40px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+}
+
+.model-more-btn-price:hover .more-btn {
+  background: none;
+  color: #000;
+  transition-duration: 0.3s;
+}
+
 /**********************HOME PAGE***********************/
 .home .header-main .main-menu .menu-inform .menu-inform-title {
   color: #fff;
@@ -336,21 +401,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-transform: uppercase;
-}
-.section-model .model-wrap .model-list .model-item .model-more-btn .more-btn {
-  display: block;
-  padding: 15px;
-  width: 100%;
-  background: #000;
-  border-radius: 40px;
-  font-family: "Inter";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 2px;
-  text-align: center;
-  color: #fff;
   text-transform: uppercase;
 }
 
@@ -629,48 +679,180 @@ h1, h2, h3, h4, h5, h6 {
   width: 75%;
   margin: 0 auto;
 }
-.inform-section .description-inform {
+
+.inform-margin {
+  margin-bottom: 80px;
+}
+
+.description-inform {
   font-family: "Nissan Brand";
   font-weight: 300;
   font-size: 15px;
   line-height: 26px;
   letter-spacing: 1px;
 }
-.inform-section .head-inform {
+
+.head-inform {
   font-family: "Nissan Brand";
   font-weight: 400;
   font-size: 42px;
   line-height: 48px;
   margin-bottom: 40px;
 }
-.inform-section .head-inform-img {
+
+.head-inform-img {
   width: 100%;
 }
-.inform-section .row-inform {
+
+.row-inform {
   display: flex;
   width: 100%;
 }
-.inform-section .row-inform .col-inform {
+.row-inform .col-inform {
   width: 50%;
   display: flex;
   align-items: center;
 }
-.inform-section .row-inform .col-center {
+.row-inform .col-center {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 24px;
 }
-.inform-section .sub-title-inform {
+
+.sub-title-inform {
   font-family: "Nissan Brand";
   font-weight: 400;
   font-size: 36px;
   line-height: 46px;
   padding: 75px 0;
 }
-.inform-section .sub-title {
+
+.sub-title {
   font-family: "Nissan Brand";
   font-weight: 400;
   font-size: 36px;
   line-height: 46px;
+}
+
+.row-revers {
+  flex-direction: row-reverse;
+}
+
+.inform-wrap {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.connect-section .head-inform {
+  margin-bottom: 40px;
+}
+.connect-section img {
+  width: 100%;
+  margin-bottom: 80px;
+}
+.connect-section .blog-list {
+  width: 75%;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.connect-section .blog-list .blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.connect-section .blog-list .blog-item .blog-img__wrap {
+  margin-bottom: 20px;
+}
+.connect-section .blog-list .blog-item .blog-img__wrap .blog-img {
+  margin: 0;
+}
+.connect-section .blog-list .blog-item .blog-title {
+  margin-bottom: 10px;
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.connect-section .blog-list .blog-item .blog-description {
+  margin-bottom: 20px;
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  flex: 1 1 auto;
+}
+
+.mobility-section .head-inform {
+  margin-bottom: 40px;
+}
+.mobility-section .blog-list {
+  width: 75%;
+  margin: 0 auto 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.mobility-section .blog-list .blog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.mobility-section .blog-list .blog-item .blog-img__wrap {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.mobility-section .blog-list .blog-item .blog-img__wrap .blog-img {
+  margin: 0;
+  width: 100%;
+}
+.mobility-section .blog-list .blog-item .blog-title {
+  margin-bottom: 10px;
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.mobility-section .blog-list .blog-item .blog-description {
+  margin-bottom: 20px;
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  flex: 1 1 auto;
+}
+
+.personal-section {
+  width: 75%;
+  margin: 0 auto 80px;
+}
+.personal-section .head-inform {
+  margin-bottom: 40px;
+}
+
+.more-section {
+  width: 75%;
+  margin: 0 auto 80px;
+}
+.more-section .more-title {
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 54px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.more-section .more-btn-groupe {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.more-section .description-inform {
+  text-align: justify;
 }
