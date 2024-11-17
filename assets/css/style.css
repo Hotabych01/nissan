@@ -506,85 +506,171 @@ h1, h2, h3, h4, h5, h6 {
 
 .slider-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
-  margin-bottom: 80px;
-
+  align-items: start;
+  margin-bottom: 100px;
 }
 .slider-section .slider-wrap {
-  display: flex;
-  width: 100%;
-}
-.slider-section .slider-wrap .slider-main {
-  width: 60%;
-  padding-right: 20px;
-  position: relative;
-}
-.slider-section .slider-wrap .slider-main .slider-img {
-  display: flex;
-  transition: transform 0.5s ease;
+  width: 75%;
   overflow: hidden;
-  position: relative;
-}
-.slider-section .slider-wrap .slider-main .slider-img .slide {
-  min-width: 100%;
-  transition: opacity 0.5s ease;
-}
-.slider-section .slider-wrap .slider-main .slider-img .slide img {
-  width: 100%;
-  border-radius: 8px;
-}
-.slider-section .slider-wrap .slider-main .slide-info {
-  text-align: left;
-  margin-top: 10px;
-}
-.slider-section .slider-wrap .slider-main .slide-info .slide-counter {
-  font-weight: bold;
-  font-size: 16px;
-}
-.slider-section .slider-wrap .slider-main .slide-info .slide-description {
-  font-size: 14px;
-  color: #777;
-  margin-top: 5px;
-}
-.slider-section .slider-wrap .slider-main .slide-info .pagination {
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 20px;
+  height: 500px;
+  padding-bottom: 30px;
+  margin: 0 auto;
 }
-.slider-section .slider-wrap .slider-main .slide-info .pagination .dot {
-  width: 15px;
-  height: 2px;
-  background-color: #ddd;
-  display: inline-block;
-  transition: background-color 0.3s;
+.slider-section .slider-wrap .slider-list {
+  width: 60%;
+  height: 100% !important;
 }
-.slider-section .slider-wrap .slider-main .slide-info .pagination .dot.active {
-  background-color: black;
+.slider-section .slider-wrap .slider-list .slick-list.draggable {
+  height: 100% !important;
 }
-.slider-section .slider-wrap .slider-preview {
+.slider-section .slider-wrap .slider-list .slick-list.draggable .slick-track {
+  height: 100%;
+}
+.slider-section .slider-wrap .slider-prev {
   width: 40%;
+  height: 100% !important;
   opacity: 0.5;
 }
-.slider-section .slider-wrap .slider-preview img {
+.slider-section .slider-wrap .slider-prev .slick-list.draggable {
+  height: 100% !important;
+}
+.slider-section .slider-wrap .slider-prev .slick-list.draggable .slick-track {
+  height: 100%;
+}
+.slider-section .slider-wrap .slide {
+  height: 100% !important;
+}
+.slider-section .slider-wrap .slide .slide-img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.slider-section .slider-wrap .slick-prev::before, .slider-section .slider-wrap .slick-next::before {
+  display: none;
+}
+.slider-section .slider-wrap .slick-next.slick-arrow {
   width: 100%;
-  height: auto;
-  transition: opacity 0.3s;
-  border-radius: 8px;
 }
-.slider-section .slider-controls {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+.slider-section .slider-wrap .slick-prev.slick-arrow {
+  width: 100%;
+}
+.slider-section .slider-wrap .slick-prev, .slider-section .slider-wrap .slick-next {
+  top: 110%;
+}
+.slider-section .slider-row {
+  width: 75%;
+  margin: 0 auto;
   display: flex;
-  gap: 15px;
 }
-.slider-section .slider-controls button {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+.slider-section .slider-row .slider-col {
+  width: 50%;
+}
+.slider-section .slider-row .slider-col .slide-info {
+  text-align: start;
+  margin-top: 10px;
+}
+.slider-section .slider-row .slider-col .slide-info .slider-current {
+  display: flex;
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.slider-section .slider-row .slider-col .slide-info .current-slide, .slider-section .slider-row .slider-col .slide-info .total-slides {
+  color: #000;
+}
+.slider-section .slider-row .slider-col .slide-info .slide-text {
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.slider-section .slider-row .slider-col .slider-dots {
+  position: relative;
+}
+.slider-section .slider-row .slider-col .slider-dots .slick-dots {
+  display: flex;
+  gap: 90px;
+}
+.slider-section .slider-row .slider-col .slider-dots .slick-dots .slick-active {
+  width: 100%;
+}
+.slider-section .slider-row .slider-col .slider-dots .slick-dots .slick-active .dots-line {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+.slider-section .slider-row .slider-col .slider-dots .slick-dots li {
+  width: 100%;
+}
+.slider-section .slider-row .slider-col .slider-dots .slick-dots li .dots-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ACACAC;
+}
+.slider-section .slider-row .slider-col .slider-arrow {
+  position: relative;
+}
+.slider-section .slider-row .slider-col .slider-arrow .slick-prev {
+  left: 80%;
+}
+.slider-section .slider-row .slider-col .slider-arrow .slick-next {
+  right: 5%;
+}
+
+.inform-section {
+  width: 75%;
+  margin: 0 auto;
+}
+.inform-section .description-inform {
+  font-family: "Nissan Brand";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+}
+.inform-section .head-inform {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+.inform-section .head-inform-img {
+  width: 100%;
+}
+.inform-section .row-inform {
+  display: flex;
+  width: 100%;
+}
+.inform-section .row-inform .col-inform {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.inform-section .row-inform .col-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.inform-section .sub-title-inform {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
+  padding: 75px 0;
+}
+.inform-section .sub-title {
+  font-family: "Nissan Brand";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 46px;
 }

@@ -1,82 +1,42 @@
-const slides = document.querySelectorAll('.slide');
-const slideCounter = document.querySelector('.slide-counter');
-const slideDescription = document.querySelector('.slide-description');
-const dots = document.querySelectorAll('.dot');
-const previewImage = document.querySelector('.preview-slide');
+$(document).ready(function () {
+	const $sliderList = $('.slider-list');
+	const $sliderPrev = $('.slider-prev');
+	const $currentSlide = $('.current-slide');
+	const $totalSlides = $('.total-slides');
 
-const slideData = [
-  { src: '/assets/img/slider.png', title: 'Унікальні Сидіння N-Sport', description: 'Унікальна структура та неймовірна зручність' },
-  { src: '/assets/img/slider.jpg', title: 'Новий Екстер’єр', description: 'Стильний та аеродинамічний дизайн' },
-  { src: '/assets/img/slider.png', title: 'Передові Технології', description: 'Інновації для вашого комфорту' },
-  { src: '/assets/img/slider.jpg', title: 'Екологічні Матеріали', description: 'Вибір для майбутнього' },
-  { src: '/assets/img/slider.png', title: 'Безпека', description: 'Захист кожного пасажира' }
-];
+	// Инициализация основного слайдера
+	$sliderList.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: true,
+		fade: true,
+		appendDots: $('.slider-dots'),
+		asNavFor: '.slider-prev',
+		customPaging: function(slick, index) {
+			var image = $(slick.$slides[index]).find('.slider__img').attr('src');
+			return '<div class="dots-line"></div>'
+		}
+	});
 
-let currentSlide = 0;
-let autoScrollInterval;
+	// Инициализация навигационного слайдера
+	$sliderPrev.slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		asNavFor: '.slider-list',
+		arrows: true,
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true,
+		nextArrow: document.querySelector('.slick-next'),
+		prevArrow: document.querySelector('.slick-prev') 
+	});
 
-function updateSlider() {
-  slides.forEach((slide, index) => {
-    slide.style.display = index === currentSlide ? 'block' : 'none';
-  });
+	// Установка общего количества слайдов
+	$totalSlides.text($sliderList.slick('getSlick').slideCount);
 
-  const nextSlide = (currentSlide + 1) % slides.length;
-  previewImage.src = slideData[nextSlide].src;
-  slideCounter.textContent = `${currentSlide + 1}/5 — ${slideData[currentSlide].title}`;
-  slideDescription.textContent = slideData[currentSlide].description;
-
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
-  });
-}
-
-function startAutoScroll() {
-  autoScrollInterval = setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlider();
-  }, 3000);
-}
-
-document.querySelector('.next').addEventListener('click', () => {
-  clearInterval(autoScrollInterval);
-  currentSlide = (currentSlide + 1) % slides.length;
-  updateSlider();
-  startAutoScroll();
+	// Обновление текущего слайда
+	$sliderList.on('afterChange', function (event, slick, currentSlide) {
+		$currentSlide.text(currentSlide + 1);
+	});
 });
-
-document.querySelector('.prev').addEventListener('click', () => {
-  clearInterval(autoScrollInterval);
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  updateSlider();
-  startAutoScroll();
-});
-
-let startX = 0;
-let isTouchMove = false;
-
-document.querySelector('.slider-img').addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-  isTouchMove = true;
-});
-
-document.querySelector('.slider-img').addEventListener('touchmove', (e) => {
-  if (isTouchMove) {
-    const endX = e.touches[0].clientX;
-    if (startX > endX + 50) {
-      currentSlide = (currentSlide + 1) % slides.length;
-      updateSlider();
-      isTouchMove = false;
-    } else if (startX < endX - 50) {
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      updateSlider();
-      isTouchMove = false;
-    }
-  }
-});
-
-document.querySelector('.slider-img').addEventListener('touchend', () => {
-  isTouchMove = false;
-});
-
-updateSlider();
-startAutoScroll();

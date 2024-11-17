@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/slick.css">
+	<link rel="stylesheet" href="/assets/css/slick-theme.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
 	<link rel="stylesheet" href="/assets/font/nissanbrand/stylesheet.css">
 	<link rel="stylesheet" href="/assets/font/inter/inter.css">
@@ -68,45 +70,95 @@
 
 	<section class="slider-section">
 		<div class="slider-wrap">
-		<div class="slider-main">
-			<div class="slider-img">
-				<div class="slide active">
-				<img src="/assets/img/slider.png" alt="Слайд 1">
+			<div class="slider-list">
+				<div class="slide">
+					<img class="slide-img" src="/assets/img/slider.png" alt="slider">
 				</div>
 				<div class="slide">
-				<img src="/assets/img/slider.jpg" alt="Слайд 2">
+					<img class="slide-img" src="/assets/img/slider.jpg" alt="slider">
 				</div>
 				<div class="slide">
-				<img src="/assets/img/slider.png" alt="Слайд 3">
+					<img class="slide-img" src="/assets/img/slider.png" alt="slider">
 				</div>
 				<div class="slide">
-				<img src="/assets/img/slider.jpg" alt="Слайд 4">
-				</div>
-				<div class="slide">
-				<img src="/assets/img/slider.png" alt="Слайд 5">
+					<img class="slide-img" src="/assets/img/slider.jpg" alt="slider">
 				</div>
 			</div>
-			<div class="slide-info">
-				<p class="slide-counter">1/5 — Унікальні Сидіння N-Sport</p>
-				<p class="slide-description">Унікальна структура та неймовірна зручність</p>
-				<div class="pagination">
-				<span class="dot active"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
-				<span class="dot"></span>
+			<div class="slider-prev">
+				<div class="slide">
+					<img class="slide-img slide-prev" src="/assets/img/slider.jpg" alt="slider">
+				</div>
+				<div class="slide">
+					<img class="slide-img slide-prev" src="/assets/img/slider.png" alt="slider">
+				</div>
+				<div class="slide">
+					<img class="slide-img slide-prev" src="/assets/img/slider.jpg" alt="slider">
+				</div>
+				<div class="slide">
+					<img class="slide-img slide-prev" src="/assets/img/slider.png" alt="slider">
 				</div>
 			</div>
 		</div>
-		<div class="slider-preview">
-			<img src="/assets/img/slider2.jpg" alt="Preview Slide" class="preview-slide">
+		<div class="slider-row">
+			<div class="slider-col">
+				<div class="slide-info">
+					<div class="slider-current">
+						<span class="current-slide">1</span> / <span class="total-slides">5</span>
+						<p class="line"> — </p>
+						<p class="slider-name">Унікальні сидіння N-Sport</p>
+					</div>
+					<p class="slide-text">
+						Унікальна структура та неймовірна зручність
+					</p>
+				</div>
+				<div class="slider-dots"></div>
+			</div>
+			<div class="slider-col">
+				<div class="slider-arrow">
+					<button class="slick-prev"> <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.47182 0.393902L-0.0234375 7.88916L1.39076 9.30336L8.88602 1.8081L7.47182 0.393902Z" fill="#ACACAC"/> <path d="M1.44545 6.42955L0.03125 7.84375L7.52651 15.339L8.94071 13.9248L1.44545 6.42955Z" fill="#ACACAC"/> <path d="M52 6.7998H2.5V8.7998H52V6.7998Z" fill="#ACACAC"/> </svg> </button>
+					<button class="slick-next"> <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M42.8142 1.00879L50.3142 8.60879" stroke="#030B0E" stroke-width="2"/> <path d="M50.3142 7.20898L42.8142 14.709" stroke="#030B0E" stroke-width="2"/> <path d="M0 7.80029H47.5" stroke="#030B0E" stroke-width="2" stroke-linecap="square"/> </svg> </button>
+				</div>
+			</div>
 		</div>
+	</section>
+
+	<section class="inform-section">
+		<div class="bose-block-inform">
+			<p class="description-inform">
+				Bose® Personal® Plus
+			</p>
+			<h2 class="head-inform">
+				Потужність чистого звучання
+			</h2>
+			<img src="/assets/img/head-img.png" alt="head-img" class="head-inform-img">
+			<div class="row-inform">
+				<div class="col-inform col-first">
+					<h3 class="sub-title-inform">
+						Бездоганна якість звучання
+					</h3>
+				</div>
+				<div class="col-inform col-second">
+					<p class="description-inform">
+						Система Bose® Personal® Plus має 10 високоякісних динаміків, розташованих по всьому салону Juke для максимальної якості звуку.
+					</p>
+				</div>
+			</div>
+			<div class="row-inform">
+				<div class="col-inform col-first">
+					<img src="/assets/img/col.png" alt="col">
+				</div>
+				<div class="col-inform col-second col-center">
+					<h3 class="sub-title">
+						Відтепер водій і передній пасажир мають змогу насолоджуватися звуком на повну
+					</h3>
+					<p class="description-inform">
+						У Juke із системою Bose® Personal® Plus можна укомплектувати підголівники крісел водія та переднього пасажира динаміками UltraNearfield. Ви відчуєте, що звук буквально оточує вас з усіх боків, забезпечуючи відчуття повного занурення в улюблену музику. 
+					</p>
+				</div>
+			</div>
 		</div>
-		<div class="slider-controls">
-		<button class="prev">←</button>
-		<button class="next">→</button>
-		</div>
-	</section>	 
+		
+	</section>
 
 	<footer class="footer">
 		<div class="footer-wrap">
