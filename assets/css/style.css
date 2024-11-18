@@ -7,6 +7,7 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -73,20 +74,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-body {
-  display: none;
-}
-
 .model-more-btn .more-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 15px;
   width: 100%;
@@ -100,31 +91,27 @@ body {
   color: #000;
   text-transform: uppercase;
   border: 1px solid #000;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .model-more-btn .more-btn span svg {
   width: 100%;
   height: 100%;
 }
 .model-more-btn .more-btn span svg path {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 .model-more-btn:hover .more-btn {
   border: 1px solid #666666;
   color: #666666;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .model-more-btn:hover .more-btn span svg {
   width: 100%;
   height: 100%;
 }
 .model-more-btn:hover .more-btn span svg path::before {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
   color: #666666;
 }
 
@@ -143,25 +130,18 @@ body {
   color: #fff;
   border: 1px solid #000;
   text-transform: uppercase;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 .model-more-btn-price:hover .more-btn {
   background: none;
   color: #000;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 .active {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 /**********************HOME PAGE***********************/
@@ -179,18 +159,12 @@ body {
   margin-bottom: 100px;
 }
 .header-main .nav-submenu__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 15px 80px;
   background: #000;
 }
 .header-main .nav-submenu__wrap .nav-submenu-inform {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header-main .nav-submenu__wrap .nav-submenu-inform .nav-submenu-text {
@@ -207,8 +181,6 @@ body {
   margin-right: 15px;
 }
 .header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header-main .nav-submenu__wrap .nav-submenu .nav-submenu__list .nav-submenu__item {
@@ -224,28 +196,18 @@ body {
   margin: 0;
 }
 .header-main .main-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 50px 80px;
   margin-bottom: 100px;
 }
 .header-main .main-menu .menu-inform {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header-main .main-menu .menu-inform .menu-inform-logo {
   margin-right: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .header-main .main-menu .menu-inform .menu-inform-title {
   font-family: "Nissan Brand";
@@ -259,8 +221,6 @@ body {
   position: relative;
 }
 .header-main .main-menu .menu-pages .menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item {
@@ -278,14 +238,10 @@ body {
   top: 20%;
   left: 0;
   display: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: #fff;
   padding: 16px;
   gap: 15px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item {
@@ -298,12 +254,8 @@ body {
   line-height: 19px;
   text-align: left;
   color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a::after {
   content: "›";
@@ -316,24 +268,14 @@ body {
 }
 .header-main .design-menu {
   background: #EAEAEA;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 12px 0;
 }
 .header-main .design-menu .menu-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 40px;
 }
 .header-main .design-menu .menu-list .menu-item {
@@ -351,8 +293,7 @@ body {
   position: absolute;
   top: 125%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   width: 2em;
   height: 60%;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
@@ -375,22 +316,14 @@ body {
 }
 .main-section .car-info-wrap {
   padding: 50px 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .main-section .car-info-wrap .car-info {
   padding: 20px;
   background: rgba(255, 255, 255, 0.5019607843);
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  backdrop-filter: blur(30px);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 30%;
 }
 .main-section .car-info-wrap .car-info .car-info-title {
@@ -415,19 +348,11 @@ body {
   margin-bottom: 10px;
 }
 .main-section .model-more-btn .more-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 15px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   background: none;
   border-radius: 40px;
@@ -439,8 +364,7 @@ body {
   color: #000;
   text-transform: uppercase;
   border: 1px solid #000;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section .model-more-btn .more-btn span svg {
   width: 100%;
@@ -448,47 +372,35 @@ body {
 }
 .main-section .model-more-btn .more-btn span svg path {
   color: #000;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section .model-more-btn:hover .more-btn {
   border: 1px solid #666666;
   color: #666666;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section .model-more-btn:hover .more-btn span svg {
   width: 100%;
   height: 100%;
 }
 .main-section .model-more-btn:hover .more-btn span svg path::before {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
   color: "#666666";
 }
 
 .main-section:nth-child(2n+1) .car-info {
   background: none;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
 }
 .main-section:nth-child(2n+1) .model-more-btn {
   margin-bottom: 10px;
 }
 .main-section:nth-child(2n+1) .model-more-btn .more-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   padding: 15px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   background: none;
   border-radius: 40px;
@@ -500,8 +412,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   border: 1px solid #fff;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section:nth-child(2n+1) .model-more-btn .more-btn span svg {
   width: 100%;
@@ -509,35 +420,26 @@ body {
 }
 .main-section:nth-child(2n+1) .model-more-btn .more-btn span svg path {
   color: #fff;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section:nth-child(2n+1) .model-more-btn:hover .more-btn {
   border: 1px solid #000;
   color: #000;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .main-section:nth-child(2n+1) .model-more-btn:hover .more-btn span svg {
   width: 100%;
   height: 100%;
 }
 .main-section:nth-child(2n+1) .model-more-btn:hover .more-btn span svg path::before {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  transition-duration: 0.3s;
   color: #000;
 }
 
 .section-model {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 .section-model .model-wrap {
@@ -554,9 +456,7 @@ body {
   letter-spacing: 2px;
 }
 .section-model .model-wrap .model-list {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 60px 1fr 60px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
 }
@@ -601,12 +501,8 @@ body {
 }
 .section-model .model-wrap .model-list .model-item .model-price {
   margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .section-model .model-wrap .model-list .model-item .model-price .price {
   font-family: "Nissan Brand";
@@ -627,15 +523,9 @@ body {
 }
 
 .section-inform {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 .section-inform .inform-wrap {
@@ -645,8 +535,6 @@ body {
   margin-bottom: 100px;
 }
 .section-inform .inform-wrap .inform-list .inform-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 60px;
 }
@@ -657,19 +545,10 @@ body {
   width: 100%;
 }
 .section-inform .inform-wrap .inform-list .inform-item .inform-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   width: 50%;
   padding: 0 40px;
 }
@@ -702,10 +581,7 @@ body {
   text-transform: uppercase;
 }
 .section-inform .inform-wrap .inform-list .inform-item:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 .section-inform .inform-wrap .inform-list .inform-item:last-child {
   margin: 0;
@@ -719,34 +595,21 @@ body {
 }
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 40px 0 100px;
   background: #000;
 }
 .footer .footer-wrap {
   width: 75%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 70px 1fr 70px 1fr 70px 1fr 70px 1fr;
   grid-template-columns: repeat(5, 1fr);
   gap: 70px;
 }
 .footer .footer-wrap .footer-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .footer .footer-wrap .footer-col .footer-col__title {
   font-family: "Nissan Brand";
@@ -757,13 +620,8 @@ body {
   color: #fff;
 }
 .footer .footer-wrap .footer-col .footer-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 8px;
   margin-bottom: 30px;
 }
@@ -778,8 +636,6 @@ body {
   color: #fff;
 }
 .footer .footer-wrap .footer-col .footer-social .footer-social__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .footer .footer-wrap .footer-col .footer-social .footer-social__list .footer-social__item {
@@ -791,19 +647,10 @@ body {
 
 /**********************DESIGN PAGE***********************/
 .main-design-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 .main-design-section .main-wrap {
@@ -826,26 +673,15 @@ body {
 }
 
 .slider-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   margin-bottom: 100px;
 }
 .slider-section .slider-wrap {
   width: 75%;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
   height: 500px;
@@ -895,8 +731,6 @@ body {
 .slider-section .slider-row {
   width: 75%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .slider-section .slider-row .slider-col {
@@ -907,8 +741,6 @@ body {
   margin-top: 10px;
 }
 .slider-section .slider-row .slider-col .slide-info .slider-current {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Nissan Brand";
   font-weight: 400;
@@ -932,8 +764,6 @@ body {
   position: relative;
 }
 .slider-section .slider-row .slider-col .slider-dots .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 90px;
 }
@@ -993,31 +823,18 @@ body {
 }
 
 .row-inform {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 .row-inform .col-inform {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .row-inform .col-center {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   gap: 24px;
 }
 
@@ -1037,10 +854,7 @@ body {
 }
 
 .row-revers {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .inform-wrap {
@@ -1058,23 +872,14 @@ body {
 .connect-section .blog-list {
   width: 75%;
   margin: 0 auto 80px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 .connect-section .blog-list .blog-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  align-items: start;
 }
 .connect-section .blog-list .blog-item .blog-img__wrap {
   margin-bottom: 20px;
@@ -1096,9 +901,7 @@ body {
   font-size: 12px;
   line-height: 22px;
   letter-spacing: 1px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .mobility-section .head-inform {
@@ -1107,23 +910,14 @@ body {
 .mobility-section .blog-list {
   width: 75%;
   margin: 0 auto 80px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 .mobility-section .blog-list .blog-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  align-items: start;
 }
 .mobility-section .blog-list .blog-item .blog-img__wrap {
   margin-bottom: 20px;
@@ -1147,9 +941,7 @@ body {
   font-size: 12px;
   line-height: 22px;
   letter-spacing: 1px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .personal-section {
@@ -1175,12 +967,8 @@ body {
   text-transform: uppercase;
 }
 .more-section .more-btn-groupe {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 60px;
 }
 .more-section .description-inform {
