@@ -73,10 +73,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
-body {
-  display: none;
-}
-
 .model-more-btn .more-btn {
   display: -webkit-box;
   display: -ms-flexbox;
