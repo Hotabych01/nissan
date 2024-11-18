@@ -40,3 +40,16 @@ $(document).ready(function () {
 		$currentSlide.text(currentSlide + 1);
 	});
 });
+
+
+
+$(document).ready(function () {
+	$(".menu-item").hover(
+	function () {
+		$(this).find(".submenu-list").stop(true, true).fadeIn(300).addClass("active");
+	},
+	function () {
+		$(this).find(".submenu-list").stop(true, true).fadeOut(300).removeClass("active");
+	}
+	);
+});

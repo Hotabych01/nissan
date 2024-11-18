@@ -77,6 +77,10 @@
 	}
 }
 
+.active {
+	display: flex !important;
+	flex-direction: column !important;
+}
 /**********************HOME PAGE***********************/
 .home {
 	.header-main {
@@ -163,6 +167,7 @@
 			}
 		}
 		.menu-pages {
+			position: relative;
 			.menu-list {
 				display: flex;
 				.menu-item {
@@ -173,6 +178,36 @@
 						font-size: 16px;
 						line-height: 14px;
 						color: #000;
+					}
+					.submenu-list {
+						position: absolute;
+						top: 20%;
+						left: 0;
+						display: none;
+						justify-content: space-between;
+						background: #fff;
+						padding: 16px;
+						gap: 15px;
+						width: fit-content;
+						.submenu-item {
+							list-style: none;
+							a {
+								font-family: 'Nissan Brand';
+								font-size: 14px;
+								font-weight: 300;
+								line-height: 19px;
+								text-align: left;
+								color: #000;
+								display: flex;
+								justify-content: space-between;
+							}
+							a::after {
+								content: '\203a';
+								font-family: 'Courier New';
+								font-size: 24px;
+								margin-left: 10px;
+							}
+						}
 					}
 				}
 				.menu-item:last-child {
@@ -227,8 +262,8 @@
 }
 
 .main-section {
-	height: 70dvh;
-	padding-top: 30vh;
+	height: 650px;
+	padding-top: 300px;
 	.car-info-wrap {
 		padding: 50px 80px;
 		display: flex;

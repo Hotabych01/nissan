@@ -139,6 +139,11 @@ h1, h2, h3, h4, h5, h6 {
   transition-duration: 0.3s;
 }
 
+.active {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 /**********************HOME PAGE***********************/
 .home .header-main .main-menu .menu-inform .menu-inform-title {
   color: #fff;
@@ -212,6 +217,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   width: 50%;
 }
+.header-main .main-menu .menu-pages {
+  position: relative;
+}
 .header-main .main-menu .menu-pages .menu-list {
   display: flex;
 }
@@ -224,6 +232,36 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   line-height: 14px;
   color: #000;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  display: none;
+  justify-content: space-between;
+  background: #fff;
+  padding: 16px;
+  gap: 15px;
+  width: fit-content;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item {
+  list-style: none;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a {
+  font-family: "Nissan Brand";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+  text-align: left;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+}
+.header-main .main-menu .menu-pages .menu-list .menu-item .submenu-list .submenu-item a::after {
+  content: "›";
+  font-family: "Courier New";
+  font-size: 24px;
+  margin-left: 10px;
 }
 .header-main .main-menu .menu-pages .menu-list .menu-item:last-child {
   margin: 0;
@@ -273,8 +311,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-section {
-  height: 70dvh;
-  padding-top: 30vh;
+  height: 650px;
+  padding-top: 300px;
 }
 .main-section .car-info-wrap {
   padding: 50px 80px;
